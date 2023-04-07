@@ -37,4 +37,6 @@ public class AppConstant {
     public static final String PRODUCT_NOT_FOUND = "product not found with this Id";
 
     public static final String PRODUCT_DELETE = "product delete Successfully ";
+
+    public static  final String DEFAULT_PRODUCT_SORT_BY = "title";
 }
