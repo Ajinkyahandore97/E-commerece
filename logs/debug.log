@@ -1,0 +1,4 @@
+2023-04-07 14:07:26,197 INFO  StartupInfoLogger:55 - [] Starting ECommerceApplication using Java 17.0.6 on DESKTOP-UFTPRTL with PID 13812 (C:\Users\Acer\Desktop\New folder (5)\E-commerce\target\classes started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-07 14:07:26,290 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-07 14:07:26,305 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-07 14:08:11,543 INFO  StartupInfoLogger:61 - [] Started ECommerceApplication in 47.939 seconds (JVM running for 52.988)

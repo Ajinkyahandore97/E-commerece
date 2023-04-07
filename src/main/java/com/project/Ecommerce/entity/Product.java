@@ -1,4 +1,7 @@
 package com.project.Ecommerce.entity;
 
-public class Product {
+
+public class Product extends BaseEntityClass{
+
+
 }
