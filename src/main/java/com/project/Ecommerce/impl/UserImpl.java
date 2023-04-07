@@ -6,7 +6,7 @@ import com.project.Ecommerce.exception.ResourceNotFoundException;
 import com.project.Ecommerce.helper.Helper;
 import com.project.Ecommerce.payload.PageableResponse;
 import com.project.Ecommerce.payload.UserDto;
-import com.project.Ecommerce.repository.UserRespository;
+import com.project.Ecommerce.repository.UserRepository;
 import com.project.Ecommerce.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.modelmapper.ModelMapper;
@@ -25,7 +25,7 @@ import java.util.stream.Collectors;
 public class UserImpl implements UserService {
 
     @Autowired
-    private UserRespository userRepo;
+    private UserRepository userRepo;
 
     @Autowired
     private ModelMapper modelMapper;
