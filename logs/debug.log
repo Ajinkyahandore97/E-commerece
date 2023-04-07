@@ -2,3 +2,76 @@
 2023-04-07 14:07:26,290 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
 2023-04-07 14:07:26,305 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
 2023-04-07 14:08:11,543 INFO  StartupInfoLogger:61 - [] Started ECommerceApplication in 47.939 seconds (JVM running for 52.988)
+2023-04-07 17:09:19,770 INFO  StartupInfoLogger:55 - [] Starting ECommerceApplication using Java 17.0.6 on DESKTOP-UFTPRTL with PID 14624 (C:\Users\Acer\Desktop\New folder (5)\E-commerce\target\classes started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-07 17:09:19,791 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-07 17:09:19,793 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-07 17:09:55,851 INFO  StartupInfoLogger:61 - [] Started ECommerceApplication in 38.448 seconds (JVM running for 43.114)
+2023-04-07 17:20:02,680 INFO  StartupInfoLogger:55 - [] Starting ECommerceApplication using Java 17.0.6 on DESKTOP-UFTPRTL with PID 8300 (C:\Users\Acer\Desktop\New folder (5)\E-commerce\target\classes started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-07 17:20:02,706 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-07 17:20:02,708 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-07 17:20:49,264 INFO  StartupInfoLogger:61 - [] Started ECommerceApplication in 49.538 seconds (JVM running for 55.02)
+2023-04-07 17:26:21,004 INFO  StartupInfoLogger:55 - [] Starting ECommerceApplication using Java 17.0.6 on DESKTOP-UFTPRTL with PID 3408 (C:\Users\Acer\Desktop\New folder (5)\E-commerce\target\classes started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-07 17:26:21,019 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-07 17:26:21,021 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-07 17:26:54,382 INFO  StartupInfoLogger:61 - [] Started ECommerceApplication in 36.007 seconds (JVM running for 40.352)
+2023-04-07 17:30:58,498 INFO  StartupInfoLogger:55 - [] Starting ECommerceApplication using Java 17.0.6 on DESKTOP-UFTPRTL with PID 11128 (C:\Users\Acer\Desktop\New folder (5)\E-commerce\target\classes started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-07 17:30:58,514 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-07 17:30:58,517 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-07 17:31:28,792 INFO  StartupInfoLogger:61 - [] Started ECommerceApplication in 32.44 seconds (JVM running for 37.127)
+2023-04-07 17:31:55,308 INFO  GlobalException:34 - [] Method Argument Exception!!
+2023-04-07 17:32:28,840 INFO  GlobalException:34 - [] Method Argument Exception!!
+2023-04-07 17:32:52,147 INFO  GlobalException:34 - [] Method Argument Exception!!
+2023-04-07 17:34:16,923 INFO  StartupInfoLogger:55 - [] Starting ECommerceApplication using Java 17.0.6 on DESKTOP-UFTPRTL with PID 16824 (C:\Users\Acer\Desktop\New folder (5)\E-commerce\target\classes started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-07 17:34:16,937 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-07 17:34:16,939 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-07 17:34:45,293 INFO  StartupInfoLogger:61 - [] Started ECommerceApplication in 30.588 seconds (JVM running for 33.943)
+2023-04-07 17:34:57,294 INFO  ProductController:27 - [] Initiating request for Create User
+2023-04-07 17:34:57,515 INFO  ProductImpl:40 - [] Initiating DAO Call for Create Product
+2023-04-07 17:34:58,250 INFO  ProductImpl:46 - [] Completing DAO Call for Create Product
+2023-04-07 17:34:58,280 INFO  ProductController:31 - [] Completed request for Create User
+2023-04-07 17:38:06,697 INFO  StartupInfoLogger:55 - [] Starting ECommerceApplication using Java 17.0.6 on DESKTOP-UFTPRTL with PID 13364 (C:\Users\Acer\Desktop\New folder (5)\E-commerce\target\classes started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-07 17:38:06,708 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-07 17:38:06,710 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-07 17:38:57,795 INFO  StartupInfoLogger:61 - [] Started ECommerceApplication in 53.451 seconds (JVM running for 57.304)
+2023-04-07 17:39:10,891 INFO  ProductController:27 - [] Initiating request for Create User
+2023-04-07 17:39:11,089 INFO  ProductImpl:40 - [] Initiating DAO Call for Create Product
+2023-04-07 17:39:11,418 INFO  ProductImpl:46 - [] Completing DAO Call for Create Product
+2023-04-07 17:39:11,443 INFO  ProductController:31 - [] Completed request for Create User
+2023-04-07 17:42:11,877 INFO  ProductController:27 - [] Initiating request for Create User
+2023-04-07 17:42:11,880 INFO  ProductImpl:40 - [] Initiating DAO Call for Create Product
+2023-04-07 17:42:11,914 INFO  ProductImpl:46 - [] Completing DAO Call for Create Product
+2023-04-07 17:42:11,922 INFO  ProductController:31 - [] Completed request for Create User
+2023-04-07 17:46:58,872 INFO  StartupInfoLogger:55 - [] Starting ECommerceApplication using Java 17.0.6 on DESKTOP-UFTPRTL with PID 2092 (C:\Users\Acer\Desktop\New folder (5)\E-commerce\target\classes started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-07 17:46:58,884 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-07 17:46:58,886 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-07 17:47:30,247 INFO  StartupInfoLogger:61 - [] Started ECommerceApplication in 33.748 seconds (JVM running for 38.01)
+2023-04-07 17:48:21,158 INFO  ProductController:27 - [] Initiating request for Create User
+2023-04-07 17:48:21,691 INFO  ProductImpl:38 - [] Initiating DAO Call for Create Product
+2023-04-07 17:48:22,515 INFO  ProductImpl:46 - [] Completing DAO Call for Create Product
+2023-04-07 17:48:22,541 INFO  ProductController:31 - [] Completed request for Create User
+2023-04-07 17:49:51,620 INFO  ProductController:27 - [] Initiating request for Create User
+2023-04-07 17:49:51,622 INFO  ProductImpl:38 - [] Initiating DAO Call for Create Product
+2023-04-07 17:49:51,696 INFO  ProductImpl:46 - [] Completing DAO Call for Create Product
+2023-04-07 17:49:51,698 INFO  ProductController:31 - [] Completed request for Create User
+2023-04-07 17:58:27,724 INFO  ProductController:83 - [] Completed request for get All Product
+2023-04-07 17:58:27,756 INFO  ProductImpl:106 - [] Initiating DAO Call for get All Product
+2023-04-07 18:00:05,262 INFO  ProductController:70 - [] Completed request for get Single Product 
+2023-04-07 18:00:05,264 INFO  ProductImpl:93 - []  Initiating DAO Call for get Single Product with ProductId 2 
+2023-04-07 18:00:05,683 INFO  ProductImpl:97 - [] Completing DAO Call for get Single Product with ProductID 2 
+2023-04-07 18:00:16,676 INFO  ProductController:83 - [] Completed request for get All Product
+2023-04-07 18:00:16,711 INFO  ProductImpl:106 - [] Initiating DAO Call for get All Product
+2023-04-07 18:06:39,240 INFO  ProductController:51 - [] Initiating request for Delete Product
+2023-04-07 18:06:39,255 INFO  ProductImpl:78 - [] Initiating DAO Call for Delete the Product data with productId 2 : 
+2023-04-07 18:06:39,728 INFO  ProductImpl:86 - [] Completing DAO Call for Delete product with productId 2 
+2023-04-07 18:06:39,746 INFO  ProductController:61 - [] Completed request for Delete Product
+2023-04-07 18:08:40,007 INFO  ProductController:70 - [] Completed request for get Single Product 
+2023-04-07 18:08:40,013 INFO  ProductImpl:93 - []  Initiating DAO Call for get Single Product with ProductId 1 
+2023-04-07 18:08:40,039 INFO  ProductImpl:97 - [] Completing DAO Call for get Single Product with ProductID 1 
+2023-04-07 18:09:17,061 INFO  ProductController:70 - [] Completed request for get Single Product 
+2023-04-07 18:09:17,062 INFO  ProductImpl:93 - []  Initiating DAO Call for get Single Product with ProductId 1 
+2023-04-07 18:09:17,096 INFO  ProductImpl:97 - [] Completing DAO Call for get Single Product with ProductID 1 
+2023-04-07 18:09:54,945 INFO  ProductController:39 - [] Initiating request for update User
+2023-04-07 18:09:54,947 INFO  ProductImpl:55 - [] Initiating DAO Call for update the Product data with productId 1 : 
+2023-04-07 18:09:55,044 INFO  ProductImpl:70 - [] Completing dao call for update the category data with  productId 1 :
+2023-04-07 18:09:55,047 INFO  ProductController:43 - [] Completed request for Update User
+2023-04-07 18:11:59,984 INFO  ProductImpl:125 - [] Initiating DAO Call for get All Product

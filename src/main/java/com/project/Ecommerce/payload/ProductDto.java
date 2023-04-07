@@ -19,17 +19,13 @@ public class ProductDto extends  BaseEntityDto{
     @Size(min = 3, max = 20, message = "Invalid Title")
     private String title;
 
-    @Size(min = 4, max = 20, message = "Invalid Description")
+    @Size(min = 4, max = 200, message = "Invalid Description")
     private String description;
 
-    @Size(min = 4, max = 20, message = "Invalid Price")
     private Integer price;
-
-    @Size(min = 4, max = 20, message = "Invalid Price")
 
     private Integer discountedPrice;
 
-    @Size(min = 4, max = 20, message = "Invalid Price")
     private Integer quantity;
 
     private Date addDate;

@@ -17,6 +17,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
+
 @Slf4j
 @Service
 public class ProductImpl implements ProductService {
@@ -34,6 +36,8 @@ public class ProductImpl implements ProductService {
         Product product = this.modelMapper.map(productDto, Product.class);
 
         log.info("Initiating DAO Call for Create Product");
+
+        product.setAddDate(new Date());
 
         product.setIsActive(AppConstant.YES);
 
@@ -59,6 +63,7 @@ public class ProductImpl implements ProductService {
         product.setDiscountedPrice(productDto.getDiscountedPrice());
         product.setQuantity(productDto.getQuantity());
         product.setLive(productDto.getLive());
+
 
         Product save = this.productRepo.save(product);
 
