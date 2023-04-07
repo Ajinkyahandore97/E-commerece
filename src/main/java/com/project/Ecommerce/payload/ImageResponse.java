@@ -10,7 +10,6 @@ import org.springframework.http.HttpStatus;
 @Builder
 public class ImageResponse {
 
-
     private String imageName;
 
     private String message;
