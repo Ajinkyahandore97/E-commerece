@@ -21,6 +21,12 @@ public class ProductController {
     @Autowired
     private ProductImpl productImpl;
 
+    /**
+     * @apiNote Product api for create product
+     * @param productDto
+     * @return
+     */
+
     @PostMapping("/")
     public ResponseEntity<ProductDto> createUser(@Valid @RequestBody ProductDto productDto) {
 
@@ -32,6 +38,13 @@ public class ProductController {
 
         return new ResponseEntity<>(productDto, HttpStatus.CREATED);
     }
+
+    /**
+     * @apiNote Product api for update
+     * @param productDto
+     * @param productId
+     * @return
+     */
 
     @PutMapping("/{productId}")
     public ResponseEntity<ProductDto> updateUser(@Valid @RequestBody ProductDto productDto, @PathVariable Long productId) {
@@ -45,6 +58,11 @@ public class ProductController {
         return ResponseEntity.ok(productDto1);
     }
 
+    /**
+     * @apiNote Delete product api
+     * @param productId
+     * @return
+     */
     @DeleteMapping("/{productId}")
     public ResponseEntity<ApiResponseMessage> deleteProduct(@PathVariable Long productId) {
 
@@ -63,6 +81,12 @@ public class ProductController {
         return new ResponseEntity<>(message, HttpStatus.OK);
     }
 
+    /**
+     * @apiNote get single product api
+     * @param productId
+     * @return
+     */
+
 
     @GetMapping("/{productId}")
     public ResponseEntity<ProductDto> getSingleProduct(@PathVariable Long productId) {
@@ -71,6 +95,15 @@ public class ProductController {
 
         return ResponseEntity.ok(this.productImpl.getSingleProduct(productId));
     }
+
+    /**
+     * @apiNote Get product api with pagination and sorting
+     * @param pageNumber
+     * @param pageSize
+     * @param sortBy
+     * @param sortDir
+     * @return
+     */
 
     @GetMapping("/")
     public ResponseEntity<PageableResponse<ProductDto>> getAllProduct(
@@ -87,6 +120,15 @@ public class ProductController {
         return new ResponseEntity<>(allProduct, HttpStatus.OK);
     }
 
+    /**
+     * @apiNote Get all product which is live
+     * @param pageNumber
+     * @param pageSize
+     * @param sortBy
+     * @param sortDir
+     * @return
+     */
+
 
     @GetMapping("/getAll/")
     public ResponseEntity<PageableResponse<ProductDto>> getAllLive(
@@ -102,6 +144,16 @@ public class ProductController {
 
         return new ResponseEntity<>(allProduct, HttpStatus.OK);
     }
+
+    /**
+     * @apiNote Get product by title with pagination and sorting
+     * @param title
+     * @param pageNumber
+     * @param pageSize
+     * @param sortBy
+     * @param sortDir
+     * @return
+     */
 
     @GetMapping("/Title/{title}")
     public ResponseEntity<PageableResponse<ProductDto>> getByTitle(

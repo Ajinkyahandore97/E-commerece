@@ -38,6 +38,13 @@ public class CategoryController {
     @Value("${user.profile.cover.path}")
     private String coverImageUploadPath;
 
+
+    /**
+     * @apiNote create category
+     * @param categoryDto
+     * @return
+     */
+
     @PostMapping("/")
     public ResponseEntity<CategoryDto> createCategory(@Valid @RequestBody CategoryDto categoryDto){
 
@@ -50,6 +57,12 @@ public class CategoryController {
         return  new ResponseEntity<>(category, HttpStatus.CREATED);
     }
 
+    /**
+     * @apiNote update Category Api
+     * @param categoryDto
+     * @param categoryId
+     * @return
+     */
     @PutMapping("/{categoryId}")
     public  ResponseEntity<CategoryDto> updateCategory(@Valid @RequestBody  CategoryDto categoryDto ,
                                                        @PathVariable Long categoryId){
@@ -62,6 +75,12 @@ public class CategoryController {
 
         return  ResponseEntity.ok(categoryDto1);
     }
+
+    /**
+     * @apiNote Delete Category Api
+     * @param categoryId
+     * @return
+     */
 
     @DeleteMapping("/{categoryId}")
     public  ResponseEntity<ApiResponseMessage> deleteCategory(@PathVariable Long categoryId){
@@ -81,6 +100,14 @@ public class CategoryController {
         return new ResponseEntity<>( message ,HttpStatus.OK);
     }
 
+    /**
+     * @apiNote Get All Category api with pagination and sorting
+     * @param pageNumber
+     * @param pageSize
+     * @param sortBy
+     * @param sortDir
+     * @return
+     */
     @GetMapping("/")
     public ResponseEntity<PageableResponse<CategoryDto>> getAllCategory (@RequestParam(value ="pageNumber", defaultValue = AppConstant.PAGE_NUMBER,required = false) int pageNumber,
                                                                          @RequestParam(value = "pageSize", defaultValue = AppConstant.PAGE_SIZE,required = false) int pageSize,
@@ -91,6 +118,11 @@ public class CategoryController {
         return ResponseEntity.ok(this.categoryImpl.getAllCategory(pageNumber,pageSize,sortBy,sortDir));
     }
 
+    /**
+     * @apiNote Get single Category api
+     * @param categoryId
+     * @return
+     */
 
 
     @GetMapping("/{categoryId}")
@@ -101,6 +133,13 @@ public class CategoryController {
         return  ResponseEntity.ok(this.categoryImpl.getSingleCategory(categoryId));
     }
 
+    /**
+     * @apiNote cover image upload api
+     * @param image
+     * @param categoryId
+     * @return
+     * @throws IOException
+     */
     @PostMapping("/image/{categoryId}")
     public ResponseEntity<ImageResponse> uploadUserImage(@RequestParam("categoryImage") MultipartFile image,
                                                          @PathVariable Long categoryId) throws IOException {
@@ -122,6 +161,12 @@ public class CategoryController {
         return new ResponseEntity<>(imageResponse, HttpStatus.CREATED);
     }
 
+    /**
+     * @apiNote Get image api
+     * @param categoryId
+     * @param response
+     * @throws IOException
+     */
     @GetMapping("/image/{categoryId}")
     public void serveImage(@PathVariable Long categoryId , HttpServletResponse response) throws IOException {
 

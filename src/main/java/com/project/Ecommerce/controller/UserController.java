@@ -33,7 +33,6 @@ public class UserController {
     @Autowired
     private UserImpl userImpl;
 
-
     @Autowired
     private FileImpl fileImpl;
 
@@ -42,6 +41,12 @@ public class UserController {
 
     @Value("${user.profile.image.path}")
     private String imageUploadPath;
+
+    /**
+     * @apiNote Create user api
+     * @param userDto
+     * @return
+     */
 
     @PostMapping("/")
     public ResponseEntity<UserDto> createUser(@Valid @RequestBody UserDto userDto){
@@ -55,6 +60,12 @@ public class UserController {
         return  new ResponseEntity<>(user, HttpStatus.CREATED);
     }
 
+    /**
+     * @apiNote Update User api
+     * @param userDto
+     * @param userId
+     * @return
+     */
     @PutMapping("/{userId}")
     public ResponseEntity<UserDto> updateUser(@Valid @RequestBody UserDto userDto, @PathVariable Long userId){
 
@@ -67,6 +78,11 @@ public class UserController {
         return ResponseEntity.ok(userDto1);
     }
 
+    /**
+     * @apiNote Delete user api
+     * @param userId
+     * @return
+     */
     @DeleteMapping("/{userId}")
     public ResponseEntity<ApiResponseMessage>deleteUser(@PathVariable Long userId){
 
@@ -85,6 +101,15 @@ public class UserController {
         return new ResponseEntity<>( message ,HttpStatus.OK);
     }
 
+    /**
+     * @apiNote get all user api
+     * @param pageNumber
+     * @param pageSize
+     * @param sortBy
+     * @param sortDir
+     * @return
+     */
+
     @GetMapping("/")
     public ResponseEntity<PageableResponse<UserDto>> getAllUser(
             @RequestParam(value = "pageNumber", defaultValue = AppConstant.PAGE_NUMBER, required = false) int pageNumber,
@@ -98,6 +123,11 @@ public class UserController {
         return ResponseEntity.ok(this.userImpl.getAllUser(pageNumber,pageSize,sortBy,sortDir));
     }
 
+    /**
+     * @apiNote get single User api
+     * @param userId
+     * @return
+     */
 
     @GetMapping("/{userId}")
     public ResponseEntity <UserDto> getSingleUser(@PathVariable Long userId){
@@ -106,6 +136,12 @@ public class UserController {
 
         return ResponseEntity.ok(this.userImpl.getSingleUser(userId));
     }
+
+    /**
+     * @apiNote Get user  By Email api
+     * @param email
+     * @return
+     */
 
     @GetMapping("/email/{email}")
     public ResponseEntity <UserDto> getUserByEmail(@PathVariable String email){
@@ -116,6 +152,12 @@ public class UserController {
 
     }
 
+    /**
+     * @apiNote Get user By keyword
+     * @param keyword
+     * @return
+     */
+
     @GetMapping("/search/{keyword}")
     public ResponseEntity <List<UserDto>> searchUserByKeyword(@PathVariable String keyword){
 
@@ -124,6 +166,14 @@ public class UserController {
         return  new ResponseEntity<>(this.userImpl.searchByUser(keyword),HttpStatus.OK);
 
     }
+
+    /**
+     * @apiNote  Upload User Image
+     * @param image
+     * @param userId
+     * @return
+     * @throws IOException
+     */
 
     @PostMapping("/image/{userId}")
     public ResponseEntity<ImageResponse> uploadUserImage(@RequestParam("userImage") MultipartFile image,
@@ -144,6 +194,12 @@ public class UserController {
         return new ResponseEntity<>(imageResponse, HttpStatus.CREATED);
     }
 
+    /**
+     * @apiNote get Image api
+     * @param userId
+     * @param response
+     * @throws IOException
+     */
 
     //serve Image
     @GetMapping("/image/{userId}")
