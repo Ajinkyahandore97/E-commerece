@@ -2,6 +2,7 @@ package com.project.Ecommerce.service;
 
 import com.project.Ecommerce.payload.PageableResponse;
 import com.project.Ecommerce.payload.UserDto;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -30,4 +31,6 @@ public interface UserService {
 
     //search User
     List<UserDto> searchByUser(String keyword);
+
+
 }
