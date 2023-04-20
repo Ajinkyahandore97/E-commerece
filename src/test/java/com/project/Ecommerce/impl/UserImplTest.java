@@ -6,24 +6,29 @@ import com.project.Ecommerce.payload.PageableResponse;
 import com.project.Ecommerce.payload.UserDto;
 import com.project.Ecommerce.repository.UserRepository;
 import com.project.Ecommerce.service.UserService;
-import net.bytebuddy.TypeCache;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.shadow.com.univocity.parsers.common.input.LineSeparatorDetector;
 import org.mockito.Mockito;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.data.domain.*;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
+import org.springframework.ui.ModelMap;
 
-import java.util.*;
-import java.util.function.Function;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class UserImplTest {
+
 
     @MockBean
     private UserRepository userRepo;
@@ -32,9 +37,7 @@ class UserImplTest {
     private UserService userService;
 
     @Autowired
-    private ModelMapper modelMapper;
-
-    User user;
+    private ModelMapper mapper;
 
     User user1;
 
@@ -44,167 +47,156 @@ class UserImplTest {
 
     User user4;
 
-    List<User> users;
-
     UserDto userDto;
 
+    List<User> ListOfusers;
+
     @BeforeEach
-    void init(){
+    public void inti()
+    {
 
-         user2 = User.builder()
+         user1 = User.builder()
                 .name("Ajinkya")
-                 .email("handoreajinkya21@gmail.com")
-                .password("ajinkya21")
+                .email("handoreajinkya21@gmail.com")
+                .password("ajinkya32")
+                .imageName("ajinkya.png")
                 .gender("male")
-                .imageName("Ajinkya.png")
-                .about("Software Engg")
+                .about("I am Software Dev")
                 .build();
 
+         userDto = UserDto.builder()
+                .name("Ajinkya Handore")
+                .gender("male")
+                .imageName("ajinkya12.png")
+                .email("handoreajinkya@gmail.com")
+                .about("I am software Tester")
+                .build();
 
+        user2 = User.builder()
+                .name("Pallavi handore")
+                .email("handorepallavi@gmail.com")
+                .password("pallavi2")
+                .imageName("pallavi.png")
+                .gender("female")
+                .about("I am Doctor")
+                .build();
 
-        userDto = UserDto.builder()
+        user3 = User.builder()
                 .name("Rajesh")
+                .email("Rajesh21@gmail.com")
+                .password("rajesh12")
+                .imageName("rajesh.png")
                 .gender("male")
-                .email("rajesh21@gmail.com")
-                .imageName("raj.png")
-                .password("rajesh26")
+                .about("I am dancer")
                 .build();
 
-        user1 = User.builder()
-                .name("Shumbham")
-                .email("handoreshubham@gmail.com")
-                .password("shubham123")
-                .imageName("shubham.png")
-                .gender("Male")
-                .about("Lawyer")
+        user4 = User.builder()
+                .name("Anuradha")
+                .email("handoreauradha21@gmail.com")
+                .password("anuradha12")
+                .imageName("anuradha.png")
+                .gender("female")
+                .about("I am lawyer")
                 .build();
 
-
-      users=new ArrayList<>();
-      users.add(user);
-      users.add(user1);
-
-
+        ListOfusers= new ArrayList<>();
+        ListOfusers.add(user1);
+        ListOfusers.add(user2);
+        ListOfusers.add(user3);
+        ListOfusers.add(user4);
     }
+
 
     @Test
     void createUserTest() {
 
-        Mockito.when(userRepo.save(Mockito.any())).thenReturn(user);
+        Mockito.when(userRepo.save(Mockito.any())).thenReturn(user1);
 
-        UserDto user1 = userService.createUser(modelMapper.map(user, UserDto.class));
+        UserDto createdUser = userService.createUser(mapper.map(user1, UserDto.class));
 
-        Assertions.assertEquals("ajinkya21",user1.getPassword());
+        Assertions.assertEquals(user1.getName(),createdUser.getName());
+
 
     }
 
     @Test
     void updateUserTest() {
 
-        Long userid= 10L;
+        Long userId=10L;
 
-        Mockito.when(userRepo.findById(userid)).thenReturn(Optional.of(user));
-        Mockito.when(userRepo.save(Mockito.any())).thenReturn(user);
+        Mockito.when(userRepo.findById(userId)).thenReturn(Optional.of(user1));
 
-        UserDto updateUser = userService.updateUser(userDto, userid);
+        Mockito.when(userRepo.save(Mockito.any())).thenReturn(user1);
 
+        UserDto updateUser = userService.updateUser(userDto, userId);
 
-        Assertions.assertNotNull(updateUser);
         Assertions.assertEquals(userDto.getName(),updateUser.getName());
-    }
-
-    @Test
-    void deleteUser() {
-
-        Long userid=10L;
-
-        Mockito.when(userRepo.findById(userid)).thenReturn(Optional.of(user));
-
-        userService.deleteUser(userid);
-
-        Mockito.verify(userRepo,Mockito.times(1)).save(user);
-
-        Assertions.assertThrows(ResourceNotFoundException.class, () -> userService.deleteUser(111L));
 
     }
 
     @Test
-    void getAllUser() {
+    void deleteUserTest() {
 
-        Page<User> page = new PageImpl<>(users);
+        Long userId = 10L;
+
+        Mockito.when(userRepo.findById(userId)).thenReturn(Optional.of(user1));
+
+        userService.deleteUser(userId);
+
+        Mockito.verify(userRepo,Mockito.times(1)).save(user1);
+
+        Assertions.assertThrows(ResourceNotFoundException.class,()->userService.deleteUser(11L));
+    }
+
+    @Test
+    void getAllUserTest() {
+
+        PageImpl<User> page = new PageImpl<>(ListOfusers);
 
         Mockito.when(userRepo.findAll((Pageable) Mockito.any())).thenReturn(page);
 
-        PageableResponse<UserDto> allUser = userService.getAllUser(1,2,"name","asc");
+        PageableResponse<UserDto> allUser = userService.getAllUser(1, 2, "name", "asc");
 
-       Assertions.assertEquals(2,allUser.getContent().size());
+        Assertions.assertEquals(4,allUser.getContent().size());
+    }
+
+    @Test
+    void getSingleUserTest() {
+
+       Long userId=10L;
+
+       Mockito.when(userRepo.findById(userId)).thenReturn(Optional.of(user1));
+
+        UserDto singleUser = userService.getSingleUser(userId);
+
+        Assertions.assertEquals("ajinkya32",singleUser.getPassword());
+
 
     }
 
     @Test
-    void getSingleUser() {
+    void getUserByEmailTest() {
 
-        Long userid=10L;
+        String email="handoreajinkya@gmail.com";
 
-        Mockito.when(userRepo.findById(userid)).thenReturn(Optional.of(user));
-
-        UserDto singleUser = userService.getSingleUser(userid);
-
-        Assertions.assertEquals(user.getName(),singleUser.getName());
-
-    }
-
-    @Test
-    void getUserByEmail() {
-
-        String email ="handoreajnkya21@gmail.com";
-
-        Mockito.when(userRepo.findByEmail(email)).thenReturn(Optional.of(user));
+        Mockito.when(userRepo.findByEmail(email)).thenReturn(Optional.of(user1));
 
         UserDto userByEmail = userService.getUserByEmail(email);
 
-        Assertions.assertEquals(user.getEmail(),userByEmail.getEmail());
-
+        Assertions.assertEquals(user1.getEmail(),userByEmail.getEmail());
     }
 
     @Test
-    void getUserByEmailAndPassword() {
+    void searchByUserTest() {
 
+        String keyword="Pallavi";
 
+        Mockito.when(userRepo.findByNameContaining(keyword)).thenReturn(ListOfusers);
 
+        List<UserDto> userDtos = userService.searchByUser(keyword);
 
+        Assertions.assertEquals(4,userDtos.size());
 
-    }
-
-    @Test
-    void searchByUser() {
-
-        user3 = User.builder()
-                .name("Rushikesh Handore")
-                .email("rushikesh21@gmail.com")
-                .password("rushikesh5")
-                .gender("male")
-                .imageName("rushi.png")
-                .about("Bussinessman")
-                .build();
-
-        user4 = User.builder()
-                .name("Pallavi Handore")
-                .email("pallavihandore@gmail.com")
-                .password("pallavi1@gmail.com")
-                .gender("female")
-                .imageName("pallavi.png")
-                .about("Dancer")
-                .build();
-
-        String keywords="Pallavi";
-
-        Mockito.when(userRepo.findByNameContaining(Mockito.anyString())).thenReturn(Arrays.asList(user3,user4));
-
-        List<UserDto> userDtos = userService.searchByUser(keywords);
-
-
-        assertEquals(2,userDtos.size());
 
     }
 }
