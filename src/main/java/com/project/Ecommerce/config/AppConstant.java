@@ -28,7 +28,7 @@ public class AppConstant {
 
     public static final String DEFAULT_CAT_SORT_BY = "title";
 
-    public static final String SORT_DIR = "asr";
+    public static final String SORT_DIR = "asc";
 
     public static final String CATEGORY_NOT_FOUND = "Category not found with this Id";
 
@@ -39,4 +39,6 @@ public class AppConstant {
     public static final String PRODUCT_DELETE = "product delete Successfully ";
 
     public static  final String DEFAULT_PRODUCT_SORT_BY = "title";
+
+    public static final String PRODUCT_SORT_DIR="asc";
 }
