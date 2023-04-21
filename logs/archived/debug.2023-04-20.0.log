@@ -1,0 +1,139 @@
+2023-04-20 13:11:01,902 INFO  StartupInfoLogger:55 - [] Starting CategoryImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 9180 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 13:11:02,030 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 13:11:02,034 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 13:11:36,329 INFO  StartupInfoLogger:61 - [] Started CategoryImplTest in 36.848 seconds (JVM running for 51.172)
+2023-04-20 13:11:37,497 INFO  CategoryImpl:50 - [] Initiating DAO Call for update the user data with categoryId 10 : 
+2023-04-20 13:11:37,539 INFO  CategoryImpl:60 - [] Completing dao call for update the category data with  categoryId 10 :
+2023-04-20 13:33:00,626 INFO  StartupInfoLogger:55 - [] Starting CategoryImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 10720 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 13:33:00,699 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 13:33:00,705 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 13:33:31,910 INFO  StartupInfoLogger:61 - [] Started CategoryImplTest in 33.354 seconds (JVM running for 41.581)
+2023-04-20 13:33:32,230 INFO  CategoryImpl:68 - [] Initiating DAO Call for Delete Category  with categoryId 10 
+2023-04-20 13:33:32,251 INFO  CategoryImpl:76 - [] Completing DAO Call for Delete Category with CategoryId 10 
+2023-04-20 13:59:41,533 INFO  StartupInfoLogger:55 - [] Starting CategoryImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 10072 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 13:59:41,583 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 13:59:41,586 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 14:00:11,288 INFO  StartupInfoLogger:61 - [] Started CategoryImplTest in 32.013 seconds (JVM running for 38.852)
+2023-04-20 14:00:11,630 INFO  CategoryImpl:83 - [] Initiating DAO Call for get All Category
+2023-04-20 14:00:11,651 INFO  CategoryImpl:91 - [] Completing DAO Call for get All Category
+2023-04-20 14:24:44,664 INFO  StartupInfoLogger:55 - [] Starting CategoryImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 3644 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 14:24:44,699 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 14:24:44,704 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 14:25:22,503 INFO  StartupInfoLogger:61 - [] Started CategoryImplTest in 40.769 seconds (JVM running for 49.013)
+2023-04-20 14:32:14,767 INFO  StartupInfoLogger:55 - [] Starting CategoryImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 9780 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 14:32:14,788 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 14:32:14,791 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 14:32:45,510 INFO  StartupInfoLogger:61 - [] Started CategoryImplTest in 33.14 seconds (JVM running for 40.92)
+2023-04-20 14:35:35,628 INFO  StartupInfoLogger:55 - [] Starting CategoryImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 2236 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 14:35:35,638 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 14:35:35,640 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 14:35:59,540 INFO  StartupInfoLogger:61 - [] Started CategoryImplTest in 25.641 seconds (JVM running for 32.311)
+2023-04-20 14:39:24,853 INFO  StartupInfoLogger:55 - [] Starting CategoryImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 8792 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 14:39:24,864 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 14:39:24,874 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 14:39:53,951 INFO  StartupInfoLogger:61 - [] Started CategoryImplTest in 31.361 seconds (JVM running for 38.762)
+2023-04-20 15:09:59,409 INFO  StartupInfoLogger:55 - [] Starting UserImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 9180 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 15:09:59,422 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 15:09:59,424 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 15:10:27,116 INFO  StartupInfoLogger:61 - [] Started UserImplTest in 29.66 seconds (JVM running for 36.062)
+2023-04-20 15:10:27,575 INFO  UserImpl:35 - [] Initiating DAO Call for Create User
+2023-04-20 15:10:27,611 INFO  UserImpl:43 - [] Completing DAO Call for Create User
+2023-04-20 15:18:33,144 INFO  StartupInfoLogger:55 - [] Starting UserImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 4716 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 15:18:33,162 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 15:18:33,165 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 15:18:57,782 INFO  StartupInfoLogger:61 - [] Started UserImplTest in 26.669 seconds (JVM running for 32.696)
+2023-04-20 15:18:58,091 INFO  UserImpl:52 - [] Initiating DAO Call for Update User
+2023-04-20 15:18:58,108 INFO  UserImpl:65 - [] Completing DAO Call For Update User
+2023-04-20 15:19:42,101 INFO  StartupInfoLogger:55 - [] Starting UserImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 8164 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 15:19:42,128 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 15:19:42,132 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 15:20:05,718 INFO  StartupInfoLogger:61 - [] Started UserImplTest in 25.58 seconds (JVM running for 31.401)
+2023-04-20 15:20:05,952 INFO  UserImpl:73 - [] Initiating DAO Call for Delete User
+2023-04-20 15:20:05,966 INFO  UserImpl:84 - [] Completing DAO Call for Delete User
+2023-04-20 15:20:06,001 INFO  UserImpl:73 - [] Initiating DAO Call for Delete User
+2023-04-20 15:54:42,204 INFO  StartupInfoLogger:55 - [] Starting UserImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 8184 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 15:54:42,216 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 15:54:42,219 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 15:55:08,712 INFO  StartupInfoLogger:61 - [] Started UserImplTest in 28.311 seconds (JVM running for 34.528)
+2023-04-20 15:55:09,213 INFO  UserImpl:35 - [] Initiating DAO Call for Create User
+2023-04-20 15:55:09,259 INFO  UserImpl:43 - [] Completing DAO Call for Create User
+2023-04-20 16:52:47,180 INFO  StartupInfoLogger:55 - [] Starting UserImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 5304 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 16:52:47,197 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 16:52:47,200 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 16:53:14,558 INFO  StartupInfoLogger:61 - [] Started UserImplTest in 29.56 seconds (JVM running for 39.53)
+2023-04-20 16:53:15,030 INFO  UserImpl:35 - [] Initiating DAO Call for Create User
+2023-04-20 16:53:15,057 INFO  UserImpl:43 - [] Completing DAO Call for Create User
+2023-04-20 16:53:42,984 INFO  StartupInfoLogger:55 - [] Starting UserImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 9856 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 16:53:43,050 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 16:53:43,053 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 16:54:10,706 INFO  StartupInfoLogger:61 - [] Started UserImplTest in 29.682 seconds (JVM running for 36.039)
+2023-04-20 16:54:11,002 INFO  UserImpl:52 - [] Initiating DAO Call for Update User
+2023-04-20 16:54:11,040 INFO  UserImpl:65 - [] Completing DAO Call For Update User
+2023-04-20 17:01:07,859 INFO  StartupInfoLogger:55 - [] Starting UserImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 10236 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 17:01:07,910 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 17:01:07,916 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 17:01:34,021 INFO  StartupInfoLogger:61 - [] Started UserImplTest in 28.183 seconds (JVM running for 35.401)
+2023-04-20 17:01:34,463 INFO  UserImpl:52 - [] Initiating DAO Call for Update User
+2023-04-20 17:01:34,477 INFO  UserImpl:65 - [] Completing DAO Call For Update User
+2023-04-20 17:35:22,456 INFO  StartupInfoLogger:55 - [] Starting UserImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 11168 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 17:35:22,466 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 17:35:22,472 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 17:35:47,715 INFO  StartupInfoLogger:61 - [] Started UserImplTest in 27.372 seconds (JVM running for 33.832)
+2023-04-20 17:35:48,575 INFO  UserImpl:73 - [] Initiating DAO Call for Delete User
+2023-04-20 17:35:48,653 INFO  UserImpl:84 - [] Completing DAO Call for Delete User
+2023-04-20 17:35:48,701 INFO  UserImpl:73 - [] Initiating DAO Call for Delete User
+2023-04-20 18:50:26,260 INFO  StartupInfoLogger:55 - [] Starting UserImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 9688 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 18:50:26,280 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 18:50:26,284 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 18:50:54,691 INFO  StartupInfoLogger:61 - [] Started UserImplTest in 30.662 seconds (JVM running for 37.971)
+2023-04-20 18:50:54,965 INFO  UserImpl:113 - []  Initiating DAO Call for get Single User
+2023-04-20 18:50:54,979 INFO  UserImpl:117 - [] Completing DAO Call for get Single User
+2023-04-20 19:15:20,148 INFO  StartupInfoLogger:55 - [] Starting ECommerceApplicationTests using Java 17.0.6 on DESKTOP-UFTPRTL with PID 8064 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 19:15:20,226 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 19:15:20,229 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 19:16:04,041 INFO  StartupInfoLogger:61 - [] Started ECommerceApplicationTests in 47.184 seconds (JVM running for 61.666)
+2023-04-20 19:16:06,338 INFO  StartupInfoLogger:55 - [] Starting UserImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 8064 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 19:16:06,364 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 19:16:06,382 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 19:16:16,541 INFO  StartupInfoLogger:61 - [] Started UserImplTest in 10.704 seconds (JVM running for 74.166)
+2023-04-20 19:16:16,770 INFO  UserImpl:126 - []  Initiating DAO Call for get User By Email
+2023-04-20 19:16:16,804 INFO  UserImpl:130 - []  Completing DAO Call for get User By Email
+2023-04-20 19:16:17,133 INFO  UserImpl:95 - [] Initiating DAO Call for get All User
+2023-04-20 19:16:17,140 INFO  UserImpl:103 - [] Completing DAO Call for get All User
+2023-04-20 19:16:17,353 INFO  UserImpl:113 - []  Initiating DAO Call for get Single User
+2023-04-20 19:16:17,358 INFO  UserImpl:117 - [] Completing DAO Call for get Single User
+2023-04-20 19:16:17,447 INFO  UserImpl:143 - []  Initiating DAO Call for Search User
+2023-04-20 19:16:17,462 INFO  UserImpl:149 - []  Completing DAO Call for Search User
+2023-04-20 19:16:17,530 INFO  UserImpl:52 - [] Initiating DAO Call for Update User
+2023-04-20 19:16:17,536 INFO  UserImpl:65 - [] Completing DAO Call For Update User
+2023-04-20 19:16:17,655 INFO  UserImpl:35 - [] Initiating DAO Call for Create User
+2023-04-20 19:16:17,668 INFO  UserImpl:43 - [] Completing DAO Call for Create User
+2023-04-20 19:16:17,721 INFO  UserImpl:73 - [] Initiating DAO Call for Delete User
+2023-04-20 19:16:17,737 INFO  UserImpl:84 - [] Completing DAO Call for Delete User
+2023-04-20 19:16:17,819 INFO  UserImpl:73 - [] Initiating DAO Call for Delete User
+2023-04-20 20:44:14,093 INFO  StartupInfoLogger:55 - [] Starting CategoryImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 6636 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 20:44:14,109 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 20:44:14,112 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 20:45:10,016 INFO  StartupInfoLogger:61 - [] Started CategoryImplTest in 59.451 seconds (JVM running for 71.563)
+2023-04-20 20:45:10,732 INFO  CategoryImpl:68 - [] Initiating DAO Call for Delete Category  with categoryId 10 
+2023-04-20 20:45:10,781 INFO  CategoryImpl:76 - [] Completing DAO Call for Delete Category with CategoryId 10 
+2023-04-20 20:45:10,986 INFO  CategoryImpl:83 - [] Initiating DAO Call for get All Category
+2023-04-20 20:45:10,996 INFO  CategoryImpl:91 - [] Completing DAO Call for get All Category
+2023-04-20 20:45:11,365 INFO  CategoryImpl:101 - []  Initiating DAO Call for get Single Category with 10  
+2023-04-20 20:45:11,371 INFO  CategoryImpl:105 - [] Completing DAO Call for get Single Category with 10 
+2023-04-20 20:45:11,467 INFO  CategoryImpl:50 - [] Initiating DAO Call for update the user data with categoryId 10 : 
+2023-04-20 20:45:11,472 INFO  CategoryImpl:60 - [] Completing dao call for update the category data with  categoryId 10 :
+2023-04-20 20:45:11,564 INFO  CategoryImpl:36 - [] Initiating DAO Call for Create Category
+2023-04-20 20:45:11,567 INFO  CategoryImpl:42 - [] Completing DAO Call for Create Category
+2023-04-20 22:50:22,544 INFO  StartupInfoLogger:55 - [] Starting ProductImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 8748 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 22:50:22,567 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 22:50:22,570 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 22:50:50,402 INFO  StartupInfoLogger:61 - [] Started ProductImplTest in 29.888 seconds (JVM running for 37.347)
+2023-04-20 22:55:03,397 INFO  StartupInfoLogger:55 - [] Starting ProductImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 6816 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 22:55:03,452 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 22:55:03,456 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 22:55:32,773 INFO  StartupInfoLogger:61 - [] Started ProductImplTest in 31.284 seconds (JVM running for 40.309)
+2023-04-20 22:58:10,236 INFO  StartupInfoLogger:55 - [] Starting ProductImplTest using Java 17.0.6 on DESKTOP-UFTPRTL with PID 1908 (started by Acer in C:\Users\Acer\Desktop\New folder (5)\E-commerce)
+2023-04-20 22:58:10,269 DEBUG StartupInfoLogger:56 - [] Running with Spring Boot v2.7.10, Spring v5.3.26
+2023-04-20 22:58:10,446 INFO  SpringApplication:637 - [] The following 1 profile is active: "dev"
+2023-04-20 22:59:18,395 INFO  StartupInfoLogger:61 - [] Started ProductImplTest in 72.422 seconds (JVM running for 85.325)
