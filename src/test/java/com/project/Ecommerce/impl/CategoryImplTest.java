@@ -91,7 +91,7 @@ class CategoryImplTest {
 
     }
     @Test
-    void createCategory() {
+    void createCategoryTest() {
 
         Mockito.when(categoryRepo.save(Mockito.any())).thenReturn(category1);
 
@@ -101,7 +101,7 @@ class CategoryImplTest {
     }
 
     @Test
-    void updateCategory() {
+    void updateCategoryTest() {
 
         Long categoryId=10L;
 
@@ -116,7 +116,7 @@ class CategoryImplTest {
     }
 
     @Test
-    void deleteCategory() {
+    void deleteCategoryTest() {
 
         Long categoryId=10L;
 
@@ -130,7 +130,7 @@ class CategoryImplTest {
     }
 
     @Test
-    void getAllCategory() {
+    void getAllCategoryTest() {
 
         PageImpl<Category> page = new PageImpl<>(listOfCategory);
 
@@ -143,7 +143,7 @@ class CategoryImplTest {
     }
 
     @Test
-    void getSingleCategory() {
+    void getSingleCategoryTest() {
 
         Long  categoryId= 10L;
 

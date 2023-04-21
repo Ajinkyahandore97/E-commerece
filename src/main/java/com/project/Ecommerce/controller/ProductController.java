@@ -101,16 +101,17 @@ public class ProductController {
     }
 
 
-    @GetMapping("/Live/")
+    @GetMapping("/Live/{live}")
     public ResponseEntity<PageableResponse<ProductDto>> getProductByTrue(@RequestParam(value ="pageNumber", defaultValue = AppConstant.PAGE_NUMBER,required = false) int pageNumber,
                                                                           @RequestParam(value = "pageSize", defaultValue = AppConstant.PAGE_SIZE,required = false) int pageSize,
                                                                           @RequestParam(value = "sortBy" , defaultValue = AppConstant.DEFAULT_CAT_SORT_BY,required = false) String sortBy,
-                                                                          @RequestParam(value = "sortDir", defaultValue = AppConstant.SORT_DIR,required = false) String sortDir
+                                                                          @RequestParam(value = "sortDir", defaultValue = AppConstant.SORT_DIR,required = false) String sortDir,
+                                                                          @PathVariable Boolean live
     )
     {
         log.info("Completed request for get All Product By Live");
 
-        return ResponseEntity.ok(this.productImpl.getAllLive(pageNumber,pageSize,sortBy,sortDir));
+        return ResponseEntity.ok(this.productImpl.getAllLive(live,pageNumber,pageSize,sortBy,sortDir));
     }
 
 }

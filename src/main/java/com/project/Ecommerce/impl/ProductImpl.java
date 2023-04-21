@@ -134,7 +134,7 @@ public class ProductImpl implements ProductService {
     }
 
     @Override
-    public PageableResponse<ProductDto> getAllLive(int pageNumber, int pageSize, String sortBy, String sortDir) {
+    public PageableResponse<ProductDto> getAllLive(Boolean live,int pageNumber, int pageSize, String sortBy, String sortDir) {
 
         log.info("Initiating DAO Call for Search of Product live");
 
@@ -142,7 +142,7 @@ public class ProductImpl implements ProductService {
 
         PageRequest page = PageRequest.of(pageNumber, pageSize, sort);
 
-        Page<Product> byLiveTrue = this.productRepo.findByLiveTrue(page);
+        Page<Product> byLiveTrue = this.productRepo.findByLiveTrue(live,page);
 
         log.info("Completing DAO Call for Search of Product by Live");
 
