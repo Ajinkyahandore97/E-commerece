@@ -23,7 +23,7 @@ public class ProductController {
     private ProductImpl productImpl;
 
     @PostMapping("/")
-    public ResponseEntity<ProductDto> getSingleProduct(@Valid @RequestBody ProductDto productDto)
+    public ResponseEntity<ProductDto> createProduct(@Valid @RequestBody ProductDto productDto)
     {
         log.info("Initiating request for Create Porduct");
 
@@ -48,7 +48,7 @@ public class ProductController {
     }
 
     @DeleteMapping("/{productId}")
-    public  ResponseEntity<ApiResponseMessage> deleteCategory(@PathVariable Long productId){
+    public  ResponseEntity<ApiResponseMessage> deleteProduct(@PathVariable Long productId){
 
         log.info("Initiating request for Delete Category");
 
@@ -67,7 +67,7 @@ public class ProductController {
 
 
     @GetMapping("/{productId}")
-    public  ResponseEntity<ProductDto> getSingleCategory(@PathVariable Long productId){
+    public  ResponseEntity<ProductDto> getSingleProduct(@PathVariable Long productId){
 
         log.info("Completed request for get Single Category");
 
@@ -95,7 +95,7 @@ public class ProductController {
                                                                       @PathVariable String title
     )
     {
-        log.info("Completed request for get All Product By Titile");
+        log.info("Completed request for get All Product By Title");
 
         return ResponseEntity.ok(this.productImpl.searchByTitle(title,pageNumber,pageSize,sortBy,sortDir));
     }
