@@ -3,6 +3,7 @@ package com.project.Ecommerce.controller;
 import com.project.Ecommerce.config.AppConstant;
 import com.project.Ecommerce.impl.CategoryImpl;
 import com.project.Ecommerce.impl.CoverImageImpl;
+import com.project.Ecommerce.impl.ProductImpl;
 import com.project.Ecommerce.payload.*;
 import com.project.Ecommerce.service.CoverImageService;
 import lombok.extern.slf4j.Slf4j;
@@ -31,6 +32,9 @@ public class CategoryController {
 
     @Autowired
     private CoverImageImpl coverImpl;
+
+    @Autowired
+    private ProductImpl productImpl;
 
     @Autowired
     private CoverImageService coverService;
@@ -179,6 +183,43 @@ public class CategoryController {
         response.setContentType(MediaType.IMAGE_JPEG_VALUE);
 
         StreamUtils.copy(resource,response.getOutputStream());
+    }
+
+    @PostMapping("/{categoryId}/products")
+    public ResponseEntity<ProductDto> createProductWithCategory(
+                                      @PathVariable("categoryId") Long categoryId,
+                                      @RequestBody ProductDto productDto
+    ) {
+        ProductDto withCategory = productImpl.createWithCategory(productDto, categoryId);
+
+        return new ResponseEntity<>(withCategory, HttpStatus.CREATED);
+    }
+
+    @PutMapping("/{categoryId}/products/{productId}")
+    public ResponseEntity<ProductDto> updateCategoryOfProduct(
+            @PathVariable Long categoryId,
+            @PathVariable Long productId
+    ) {
+        ProductDto productDto = productImpl.updateCategory(productId, categoryId);
+        return new ResponseEntity<>(productDto, HttpStatus.OK);
+    }
+
+    //get products of categories
+    @GetMapping("/{categoryId}/products")
+    public ResponseEntity<PageableResponse<ProductDto>> getProductsOfCategory(
+            @PathVariable Long categoryId,
+            @RequestParam(value = "pageNumber", defaultValue = AppConstant.PAGE_NUMBER, required = false) int pageNumber,
+            @RequestParam(value = "pageSize", defaultValue = AppConstant.PAGE_SIZE, required = false) int pageSize,
+            @RequestParam(value = "sortBy", defaultValue = AppConstant.DEFAULT_PRODUCT_SORT_BY, required = false) String sortBy,
+            @RequestParam(value = "sortDir", defaultValue = AppConstant.SORT_DIR, required = false) String sortDir
+
+
+
+    ) {
+
+        PageableResponse<ProductDto> response = productImpl.getAllOfCategory(categoryId,pageNumber,pageSize,sortBy,sortDir);
+        return new ResponseEntity<>(response, HttpStatus.OK);
+
     }
 
 }

@@ -31,4 +31,6 @@ public class ProductDto extends  BaseEntityDto{
     private Boolean live;
 
     private Boolean stock;
+
+    private String productImage;
 }

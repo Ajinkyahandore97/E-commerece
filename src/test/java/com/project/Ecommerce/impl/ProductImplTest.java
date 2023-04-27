@@ -1,9 +1,12 @@
 package com.project.Ecommerce.impl;
 
+import com.project.Ecommerce.entity.Category;
 import com.project.Ecommerce.entity.Product;
 import com.project.Ecommerce.payload.PageableResponse;
 import com.project.Ecommerce.payload.ProductDto;
+import com.project.Ecommerce.repository.CategoryRepository;
 import com.project.Ecommerce.repository.ProductRepository;
+import com.project.Ecommerce.service.CategoryService;
 import com.project.Ecommerce.service.ProductService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -31,8 +34,14 @@ class ProductImplTest {
     @MockBean
     private ProductRepository productRepo;
 
+    @MockBean
+    private CategoryRepository categoryRepo;
+
     @Autowired
     private ProductService productService;
+
+    @Autowired
+    private CategoryService categoryService;
 
     @Autowired
     private ModelMapper modelmapper;
@@ -48,6 +57,8 @@ class ProductImplTest {
     List<Product> listOfProduct;
 
     ProductDto productDto;
+
+    Category category1;
 
     @BeforeEach
     public  void inti()
@@ -105,6 +116,13 @@ class ProductImplTest {
                 .discountedPrice(56000)
                 .stock(true)
                 .build();
+
+        category1 = Category.builder()
+                .title("Electronic")
+                .description("This is category of electronic store")
+                .coverImage("electronic.png")
+                .build();
+
 
         listOfProduct= new ArrayList<>();
         listOfProduct.add(product1);
@@ -200,4 +218,64 @@ class ProductImplTest {
 
         Assertions.assertEquals(listOfProduct.size(),allLive.getContent().size());
     }
+
+    @Test
+    void createWithCategory()
+    {
+        Long categoryId=10L;
+
+        Mockito.when(categoryRepo.findById(Mockito.anyLong())).thenReturn(Optional.of(category1));
+
+        Mockito.when(productRepo.save(Mockito.any())).thenReturn(product2);
+
+        ProductDto productDto1 = modelmapper.map(product2, ProductDto.class);
+
+        ProductDto withCategory = productService.createWithCategory(productDto1, categoryId);
+
+        Assertions.assertEquals(product2.getTitle(),withCategory.getTitle());
+
+    }
+
+
+    @Test
+    void updateCategory()
+    {
+
+        Long categoryId=10L;
+
+        Long productId =11L;
+
+
+        Mockito.when(categoryRepo.findById(Mockito.anyLong())).thenReturn(Optional.of(category1));
+
+        Mockito.when(productRepo.findById(Mockito.anyLong())).thenReturn(Optional.of(product1));
+
+        Mockito.when(productRepo.save(Mockito.any())).thenReturn(product1);
+
+        ProductDto productDto1 = this.productService.updateCategory(productId, categoryId);
+
+        Assertions.assertEquals(product1.getTitle(),productDto1.getTitle());
+
+    }
+
+    @Test
+    void getAllOfCategory()
+    {
+
+        Long categoryId=10L;
+
+        PageImpl<Product> page = new PageImpl<>(listOfProduct);
+
+        Mockito.when(categoryRepo.findById(Mockito.anyLong())).thenReturn(Optional.of(category1));
+
+        Mockito.when(productRepo.findByCategory(Mockito.any(),Mockito.any())).thenReturn(page);
+
+        PageableResponse<ProductDto>  product = this.productService.getAllOfCategory(categoryId, 1, 2, "title", "asc");
+
+        Assertions.assertEquals(listOfProduct.size(),product.getContent().size());
+
+
+
+    }
+
 }

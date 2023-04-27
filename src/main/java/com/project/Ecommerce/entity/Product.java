@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "Product")
@@ -43,4 +44,9 @@ public class Product extends BaseEntityClass{
     @Column(name = "Stock")
     private Boolean stock;
 
+    private String productImage;
+
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "category_id")
+    private  Category category;
 }

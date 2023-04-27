@@ -3,6 +3,8 @@ package com.project.Ecommerce.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name="Category")
@@ -25,4 +27,8 @@ public class Category extends BaseEntityClass{
 
     @Column(name="coverImage")
     private String  coverImage;
+
+    @OneToMany(mappedBy = "category",cascade = CascadeType.ALL,fetch = FetchType.LAZY)
+    private List<Product> products = new ArrayList<>();
+
 }

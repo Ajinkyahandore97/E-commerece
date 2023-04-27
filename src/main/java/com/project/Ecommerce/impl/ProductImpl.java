@@ -1,11 +1,13 @@
 package com.project.Ecommerce.impl;
 
 import com.project.Ecommerce.config.AppConstant;
+import com.project.Ecommerce.entity.Category;
 import com.project.Ecommerce.entity.Product;
 import com.project.Ecommerce.exception.ResourceNotFoundException;
 import com.project.Ecommerce.helper.Helper;
 import com.project.Ecommerce.payload.PageableResponse;
 import com.project.Ecommerce.payload.ProductDto;
+import com.project.Ecommerce.repository.CategoryRepository;
 import com.project.Ecommerce.repository.ProductRepository;
 import com.project.Ecommerce.service.ProductService;
 import lombok.extern.slf4j.Slf4j;
@@ -24,6 +26,9 @@ public class ProductImpl implements ProductService {
 
     @Autowired
     private ProductRepository productRepo;
+
+    @Autowired
+    private CategoryRepository categoryRepository;
 
     @Autowired
     private ModelMapper mapper;
@@ -149,5 +154,55 @@ public class ProductImpl implements ProductService {
         PageableResponse<ProductDto> pageableResponse = Helper.getPageableResponse(byLiveTrue, ProductDto.class);
 
         return  pageableResponse;
+    }
+
+    @Override
+    public ProductDto createWithCategory(ProductDto productDto, Long categoryId) {
+
+        Category category = categoryRepository.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.CATEGORY_NOT_FOUND));
+
+        Product product = mapper.map(productDto, Product.class);
+
+        product.setAddDate(new Date());
+
+        log.info("Initiating DAO Call for Create Product");
+
+        product.setIsActive(AppConstant.YES);
+
+        Product savedproduct = this.productRepo.save(product);
+
+        log.info("Completing DAO Call for Create Product");
+
+        return this.mapper.map(savedproduct,ProductDto.class);
+
+    }
+
+    @Override
+    public ProductDto updateCategory(Long productId, Long categoryId) {
+
+        Product product = productRepo.findById(productId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.PRODUCT_NOT_FOUND));
+
+        Category category = categoryRepository.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.CATEGORY_NOT_FOUND));
+
+        product.setCategory(category);
+
+        Product product1 = productRepo.save(product);
+
+        return mapper.map(product1,ProductDto.class);
+
+    }
+
+    @Override
+    public PageableResponse<ProductDto> getAllOfCategory(Long categoryId, int pageNumber, int pageSize, String sortBy, String sortDir) {
+
+        Category category = categoryRepository.findById(categoryId).orElseThrow(() -> new ResourceNotFoundException(AppConstant.CATEGORY_NOT_FOUND));
+
+        Sort sort = (sortDir.equalsIgnoreCase("asc")) ?(Sort.by(sortBy).ascending()) :(Sort.by(sortBy).ascending());
+
+        PageRequest pa = PageRequest.of(pageNumber, pageSize, sort);
+
+        Page<Product> byCategory = productRepo.findByCategory(category, pa);
+
+        return Helper.getPageableResponse(byCategory,ProductDto.class);
     }
 }
